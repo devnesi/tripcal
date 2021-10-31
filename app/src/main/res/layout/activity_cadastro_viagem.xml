@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CadastroViagemActivity">
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        app:tabTextAppearance="@style/MyCustomTextAppearance"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabGeral"
+            android:icon="@drawable/ic_baseline_wysiwyg_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabGasolina"
+            android:icon="@drawable/ic_baseline_local_gas_station_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabAero"
+            android:icon="@drawable/ic_baseline_airplanemode_active_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabRefeicoes"
+            android:icon="@drawable/ic_baseline_fastfood_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabHospedagem"
+            android:icon="@drawable/ic_baseline_hotel_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabDiversos"
+            android:icon="@drawable/ic_baseline_accessibility_new_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.tabs.TabItem>
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPager"/>
+
+</LinearLayout>

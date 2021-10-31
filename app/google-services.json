@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "304479781764",
+    "firebase_url": "https://tripcal-b8341-default-rtdb.firebaseio.com",
+    "project_id": "tripcal-b8341",
+    "storage_bucket": "tripcal-b8341.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304479781764:android:5aa2546f7a529e60ab13d1",
+        "android_client_info": {
+          "package_name": "dev.nesi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304479781764-jnb7h09vkv5u2imuen8m6k9ub2vo5o82.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_2l0B5RiG4YhbhkJ78kFCCJ-R_QjiA38"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "304479781764-jnb7h09vkv5u2imuen8m6k9ub2vo5o82.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
