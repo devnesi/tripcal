@@ -19,6 +19,7 @@ public class CadastroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
+        mAuth = FirebaseAuth.getInstance();
 
         etNomeRegistro = findViewById(R.id.etNomeRegistro);
         etPasswordRegistro = findViewById(R.id.etPasswordRegistro);
