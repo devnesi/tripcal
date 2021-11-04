@@ -165,6 +165,10 @@ public class TabGeral extends Fragment {
                 viagem.setMeals(TabRefeicoes.meals);
             }
 
+            if(!TabDiversos.calculaDiversos().equals(BigDecimal.ZERO)){
+                viagem.setDiversos(TabDiversos.total_diversos);
+            }
+
             mDatabase.child(String.valueOf(System.currentTimeMillis())).setValue(viagem);
             getActivity().finish();
         });
@@ -207,8 +211,9 @@ public class TabGeral extends Fragment {
         final BigDecimal totalAero = Optional.of(TabAero.calculaAero()).orElse(new BigDecimal(0));
         final BigDecimal totalHospedagem = Optional.of(TabHospedagem.calculaHospedagem()).orElse(new BigDecimal(0));
         final BigDecimal totalRefeicoes = Optional.of(TabRefeicoes.calculaRefeicoes()).orElse(new BigDecimal(0));
+        final BigDecimal totalDiversos = Optional.of(TabDiversos.calculaDiversos()).orElse(new BigDecimal(0));
 
-        viagem.setTotal(totalGasolina.add(totalAero).add(totalHospedagem).add(totalRefeicoes));
+        viagem.setTotal(totalGasolina.add(totalAero).add(totalHospedagem).add(totalRefeicoes).add(totalDiversos));
     }
 
 }

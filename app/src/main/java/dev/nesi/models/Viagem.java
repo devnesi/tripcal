@@ -21,6 +21,7 @@ public class Viagem {
     private String name, destiny;
     private Long dtInit, dtFinish;
     private Integer travelers;
+    private Double diversos;
 
     private Gasoline gasoline;
     private Airfare airfare;
@@ -115,6 +116,14 @@ public class Viagem {
         this.meals = meals;
     }
 
+    public Double getDiversos() {
+        return diversos;
+    }
+
+    public void setDiversos(Double diversos) {
+        this.diversos = diversos;
+    }
+
     public Integer getDiferenceDates(){
         if(getDtInit() == null || getDtFinish() == null){
             return 1;
@@ -149,6 +158,10 @@ public class Viagem {
             meals.setNumberOfPeople(travelers);
             meals.setNumberOfDays(getDiferenceDates());
             total = total.add(new MealsCalculationService(meals).calculate());
+        }
+
+        if(getDiversos() != null){
+            total = total.add(new BigDecimal(getDiversos()));
         }
 
         return total;
