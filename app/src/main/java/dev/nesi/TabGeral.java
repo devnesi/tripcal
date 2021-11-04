@@ -129,6 +129,8 @@ public class TabGeral extends Fragment {
                 } else {
                     viagem.setTravelers(Integer.valueOf(s.toString()));
                 }
+                calculaTotal();
+                tvTotal.setText("Total: R$ " + viagem.getTotal().toString());
             }
 
             @Override
@@ -180,12 +182,16 @@ public class TabGeral extends Fragment {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy", Locale.US);
         etDataInicial.setText(sdf.format(myCalendar.getTime()));
         viagem.setDtInit(myCalendar.getTimeInMillis());
+        calculaTotal();
+        tvTotal.setText("Total: R$ " + viagem.getTotal().toString());
     }
 
     private void updateLabelFim() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy", Locale.US);
         etDataFinal.setText(sdf.format(myCalendar2.getTime()));
         viagem.setDtFinish(myCalendar2.getTimeInMillis());
+        calculaTotal();
+        tvTotal.setText("Total: R$ " + viagem.getTotal().toString());
     }
 
     @Override
